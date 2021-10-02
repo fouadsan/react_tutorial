@@ -34,7 +34,7 @@ const Image = () => (
 );
 const Title = () => <h1>Peril</h1>;
 const Author = () => {
-  return <h4>Bob Woodward</h4>;
+  return <h4 style={{color:'#617d98', fontSize: '0.75rem', margin: '0.25rem'}}>Bob Woodward</h4>;
 };
 
 ReactDOM.render(<BookList />, document.getElementById("root"));
