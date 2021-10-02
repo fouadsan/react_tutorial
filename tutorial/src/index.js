@@ -6,8 +6,8 @@ import './index.css';
 // setup vars
 const firstBook = {
   img: "https://images-na.ssl-images-amazon.com/images/I/71Ptolb7qnL._AC_UL160_SR160,160_.jpg",
-  title: "Bob Woodward",
-  author: 'Peril',
+  title: "Peril",
+  author: 'Bob Woodward',
 }
 
 const secondBook = {
@@ -24,23 +24,30 @@ function BookList() {
         img={firstBook.img}
         title={firstBook.title}
         author={firstBook.author}
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sapiente facilis distinctio quos minima deserunt voluptatibus ipsum explicabo aliquam repudiandae.
+        </p>
+      </Book>
+
+      <Book 
+        img={secondBook.img} 
+        title={secondBook.title}
+        author={secondBook.author}
       />
-       <Book 
-         img={secondBook.img} 
-         title={secondBook.title}
-         author={secondBook.author}
-        />
     </section>
   );
 }
 
-const Book = ({}) => {
-  // const {img, title, author} = props;
+const Book = (props) => {
+  const {img, title, author, children} = props;
+  console.log(props);
   return (
     <article className='book'>
       <img src={img} alt="" />
-      <h4>{title}</h4>
-      <h1>{author}</h1>
+      <h1>{title}</h1>
+      {children}
+      <h4>{author}</h4>
     </article>
   );
 };
