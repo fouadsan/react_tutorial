@@ -15,7 +15,9 @@ const reducer = (state, action) => {
   if (action.type === 'CLOSE_MODAL') {
     return {...state, isModalOpen: false}
   };
-  
+  if(action.type === 'REMOVE_ITEM') {
+    const newPeople = state.people
+  }
   throw new Error('no matching action type');
 };
 
